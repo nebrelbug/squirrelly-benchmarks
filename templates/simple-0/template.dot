@@ -1,0 +1,1 @@
+Hello {{!it.name}}! <strong>You have {{!it.messageCount}} messages! {{!it.colors}}
