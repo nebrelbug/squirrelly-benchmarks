@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>{{title}}</title>
+    </head>
+    <body>
+        <p>{{text}}</p>
+        {{if (typeof ~~projects !== 'null') 2}}
+        {{each(~~projects) 1}}
+            <a href="{{@this.url}}">{{@this.name}}</a>
+            <p>{{@this.description}}</p>
+        {{/each 1}}
+        {{#else}}
+            No projects
+        {{/else}}
+        {{/if 2}}
+    </body>
+</html>

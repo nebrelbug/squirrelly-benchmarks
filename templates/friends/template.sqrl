@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Friends</title>
+	</head>
+	<body>
+		<div class="friends">
+		{{each(~~friends) 1}}
+			<div class="friend">
+				<ul>
+					<li>Name: {{@this.firstName}} {{@this.lastName}}</li>
+					<li>
+						Balance: {{@this.balance}}
+					</li>
+					<li>
+						Age: {{@this.age}}
+					</li>
+					<li>
+						Address: {{@this.address}}
+					</li>
+					<li>
+						Image: <img src="{{@this.picture}}">
+					</li>
+					<li>
+						Company: {{@this.company}}
+					</li>
+					<li>
+						Email: <a href="mailto:{{@this.email}}">{{@this.email}}</a>
+					</li>
+					<li>
+						About: {{@this.about}}
+					</li>
+					{{if(@this.tags) 2}}
+					<li>Tags:
+						<ul>
+						{{each(@this.tags) 3}}
+							<li>
+								{{@this}}
+							</li>
+						{{/each 3}}
+						</ul>
+					</li>
+					{{/if 2}}
+					{{if(@this.friends) 4}}
+					<li>
+						Friends:
+						<ul>
+							{{each(@this.friends) 5}}
+							<li>
+								{{@this.name}} ({{@this.id}})
+							</li>
+							{{/each 5}}
+						</ul>
+					</li>
+					{{/if 4}}
+				</ul>
+			</div>
+		{{/each 1}}
+		</div>
+	</body>
+	</html>

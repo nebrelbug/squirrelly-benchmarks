@@ -1,0 +1,22 @@
+{{foreach(~~accounts) 1}}
+<div>
+{{if (@this.status === 'closed') 2}}
+    <div>
+    Your account has been closed!
+    </div>
+{{#else}}
+    {{if (@this.status === 'suspended') 3}}
+    <div>
+    Your account has been temporarily suspended
+    </div>
+    {{#else}}
+    <div>
+        Bank balance:
+        <span class={{if(@this.balance < 0) balancecheck}}'negative'{{#else}}'positive'{{/else}}{{/if balancecheck}}>{{@this.balanceFormatted}}</span>
+    </div>
+    {{/else}}
+    {{/if 3}}
+{{/else}}
+{{/if 2}}
+</div>
+{{/foreach 1}}

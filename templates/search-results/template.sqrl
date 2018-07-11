@@ -1,0 +1,51 @@
+<div class="search-results-container">
+	<div class="searching" id="searching">
+		<div class="wait-indicator-icon"></div> Searching...
+	</div>
+	<div id="resultsContainer">
+		<div class="hd">
+			<span class="count"><span id="count">{{totalCount}}</span> results</span>
+			<div class="view-modifiers">
+				<div class="view-select">
+					View: 
+					<div class="view-icon view-icon-selected" id="viewIconGallery">
+						<i class="icon-th"></i>
+					</div>
+					<div class="view-icon" id="viewIconList">
+						<i class="icon-th-list"></i>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="resultsTarget">
+			<div class="search-results view-{{view}}">
+			{{each(~~searchRecords) 1}}
+				<div class="search-item">
+					<div class="search-item-container drop-shadow">
+						<div class="img-container">
+							<img src="{{@this.imgUrl}}">
+						</div>
+						<h4 class="title">
+							<a href="{{@this.viewItemUrl}}">{{@this.title}}</a>
+						</h4>
+						{{@this.description}}
+						{{if(@this.featured) 2}}
+						<div>Featured!</div>
+						{{/if 2}}
+						{{if(@this.sizes) 3}}
+						<div>
+							Sizes available:
+							<ul>
+							{{each(@this.sizes) 4}}
+								<li>{{@this}}</li>
+							{{/each 4}}
+							</ul>
+						</div>
+						{{/if 3}}
+					</div>
+				</div>
+			{{/each 1}}
+			</div>
+		</div>
+	</div>
+</div>

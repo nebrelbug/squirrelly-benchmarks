@@ -1,53 +1,53 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Friends</title>
+	<meta charset="UTF-8">
+	<title>Friends</title>
 </head>
 <body>
-    <div class="friends">
-        <div class="friend" for(friend in input.friends)>
-            <ul>
-                <li>Name: ${input.getFullNameRaptor(friend)}</li>
-                <li>
-                    Balance: ${friend.balance}
-                </li>
-                <li>
-                    Age: ${friend.age}
-                </li>
-                <li>
-                    Address: ${friend.address}
-                </li>
-                <li>
-                    Image: <img src=friend.picture>
-                </li>
-                <li>
-                    Company: ${friend.company}
-                </li>
-                <li>
-                    Email: <a href="mailto:${friend.email}">${friend.email}</a>
-                </li>
-                <li>
-                    About: ${friend.about}
-                </li>
-                <li if(friend.tags.length)>
-                    Tags:
-                    <ul>
-                        <li for(tag in friend.tags)>
-                            ${tag}
-                        </li>
-                    </ul>
-                </li>
-                <li if(friend.friends.length)>
-                    Friends:
-                    <ul>
-                        <li for(friend in friend.friends)>
-                            ${friend.name} (${friend.id})
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-    </div>
+	<div class="friends">
+		<div class="friend" for(friend in input.friends)>
+			<ul>
+				<li>Name: ${input.getFullNameRaptor(friend)}</li>
+				<li>
+					Balance: ${friend.balance}
+				</li>
+				<li>
+					Age: ${friend.age}
+				</li>
+				<li>
+					Address: ${friend.address}
+				</li>
+				<li>
+					Image: <img src=friend.picture>
+				</li>
+				<li>
+					Company: ${friend.company}
+				</li>
+				<li>
+					Email: <a href="mailto:${friend.email}">${friend.email}</a>
+				</li>
+				<li>
+					About: ${friend.about}
+				</li>
+				<li if(friend.tags.length)>
+					Tags:
+					<ul>
+						<li for(tag in friend.tags)>
+							${tag}
+						</li>
+					</ul>
+				</li>
+				<li if(friend.friends.length)>
+					Friends:
+					<ul>
+						<li for(friend in friend.friends)>
+							${friend.name} (${friend.id})
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
 </body>
 </html>

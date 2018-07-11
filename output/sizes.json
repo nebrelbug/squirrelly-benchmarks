@@ -2,23 +2,27 @@
     "friends": {
         "gzipped": {
             "dust": 488,
-            "marko": 775
+            "marko": 775,
+            "squirrelly": 585
         },
         "uncompressed": {
             "dust": 1362,
-            "marko": 2307
+            "marko": 2307,
+            "squirrelly": 2046
         }
     },
     "if-expression": {
         "gzipped": {
             "jade": 387,
             "marko": 462,
-            "pug": 905
+            "pug": 905,
+            "squirrelly": 367
         },
         "uncompressed": {
             "jade": 1049,
             "marko": 1104,
-            "pug": 2138
+            "pug": 2138,
+            "squirrelly": 725
         }
     },
     "projects-escaped": {
@@ -40,35 +44,39 @@
             "dust": 266,
             "handlebars": 546,
             "marko": 545,
-            "marko (native-for)": 567
+            "marko (native-for)": 567,
+            "squirrelly": 352
         },
         "uncompressed": {
             "dust": 579,
             "handlebars": 1616,
             "marko": 1568,
-            "marko (native-for)": 1596
+            "marko (native-for)": 1596,
+            "squirrelly": 751
         }
     },
     "reverse-helper": {
         "gzipped": {
             "dust": 147,
             "marko": 361,
-            "squirrelly": 150
+            "squirrelly": 132
         },
         "uncompressed": {
             "dust": 311,
             "marko": 950,
-            "squirrelly": 299
+            "squirrelly": 272
         }
     },
     "search-results": {
         "gzipped": {
             "dust": 544,
-            "marko": 711
+            "marko": 711,
+            "squirrelly": 664
         },
         "uncompressed": {
             "dust": 1501,
-            "marko": 1931
+            "marko": 1931,
+            "squirrelly": 2027
         }
     },
     "simple-0": {
@@ -77,14 +85,14 @@
             "dust": 172,
             "handlebars": 321,
             "marko": 325,
-            "squirrelly": 158
+            "squirrelly": 142
         },
         "uncompressed": {
             "dot": 356,
             "dust": 233,
             "handlebars": 633,
             "marko": 759,
-            "squirrelly": 200
+            "squirrelly": 173
         }
     },
     "simple-1": {
@@ -126,13 +134,13 @@
             "dot": 114,
             "handlebars": 196,
             "pug": 124,
-            "squirrelly": 139
+            "squirrelly": 121
         },
         "uncompressed": {
             "dot": 102,
             "handlebars": 246,
             "pug": 116,
-            "squirrelly": 200
+            "squirrelly": 172
         }
     },
     "ui-components": {
