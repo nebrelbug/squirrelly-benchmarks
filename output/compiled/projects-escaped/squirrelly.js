@@ -1,0 +1,4 @@
+module.exports=function anonymous(options,Sqrl
+/*``*/) {
+var tmpltRes='<html>\r\n    <head>\r\n        <title>';tmpltRes+=Sqrl.F.e(options.title);tmpltRes+='</title>\r\n    </head>\r\n    <body>\r\n        <p>';tmpltRes+=Sqrl.F.e(options.text);tmpltRes+='</p>\r\n        ';if(options.projects){tmpltRes+='\r\n        ';for(var i=0;i<options.projects.length; i++){tmpltRes+=(function(hvals){var tmpltRes='';var hvals1=hvals;tmpltRes+='\r\n            <a href="';tmpltRes+=Sqrl.F.e(hvals.this.url);tmpltRes+='">';tmpltRes+=Sqrl.F.e(hvals.this.name);tmpltRes+='</a>\r\n            <p>';tmpltRes+=Sqrl.F.e(hvals.this.description);tmpltRes+='</p>\r\n        ';return tmpltRes})({this:options.projects[i],index:i})};tmpltRes+='\r\n        ';}else{tmpltRes+='\r\n            No projects\r\n        ';}tmpltRes+='\r\n    </body>\r\n</html>';return tmpltRes
+}

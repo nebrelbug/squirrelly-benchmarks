@@ -6,7 +6,7 @@
 	</head>
 	<body>
 		<div class="friends">
-		{{each(~~friends) 1}}
+		{{each(options.friends)}}
 			<div class="friend">
 				<ul>
 					<li>Name: {{@this.firstName}} {{@this.lastName}}</li>
@@ -31,32 +31,32 @@
 					<li>
 						About: {{@this.about}}
 					</li>
-					{{if(@this.tags) 2}}
+					{{if(@this.tags)}}
 					<li>Tags:
 						<ul>
-						{{each(@this.tags) 3}}
+						{{each(@this.tags)}}
 							<li>
 								{{@this}}
 							</li>
-						{{/each 3}}
+						{{/each}}
 						</ul>
 					</li>
-					{{/if 2}}
-					{{if(@this.friends) 4}}
+					{{/if}}
+					{{if(@this.friends)}}
 					<li>
 						Friends:
 						<ul>
-							{{each(@this.friends) 5}}
+							{{each(@this.friends)}}
 							<li>
 								{{@this.name}} ({{@this.id}})
 							</li>
-							{{/each 5}}
+							{{/each}}
 						</ul>
 					</li>
-					{{/if 4}}
+					{{/if}}
 				</ul>
 			</div>
-		{{/each 1}}
+		{{/each}}
 		</div>
 	</body>
 	</html>

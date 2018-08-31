@@ -19,7 +19,7 @@
 		</div>
 		<div id="resultsTarget">
 			<div class="search-results view-{{view}}">
-			{{each(~~searchRecords) 1}}
+			{{each(options.searchRecords)}}
 				<div class="search-item">
 					<div class="search-item-container drop-shadow">
 						<div class="img-container">
@@ -29,22 +29,22 @@
 							<a href="{{@this.viewItemUrl}}">{{@this.title}}</a>
 						</h4>
 						{{@this.description}}
-						{{if(@this.featured) 2}}
+						{{if(@this.featured)}}
 						<div>Featured!</div>
-						{{/if 2}}
-						{{if(@this.sizes) 3}}
+						{{/if}}
+						{{if(@this.sizes)}}
 						<div>
 							Sizes available:
 							<ul>
-							{{each(@this.sizes) 4}}
+							{{each(@this.sizes)}}
 								<li>{{@this}}</li>
-							{{/each 4}}
+							{{/each}}
 							</ul>
 						</div>
-						{{/if 3}}
+						{{/if}}
 					</div>
 				</div>
-			{{/each 1}}
+			{{/each}}
 			</div>
 		</div>
 	</div>

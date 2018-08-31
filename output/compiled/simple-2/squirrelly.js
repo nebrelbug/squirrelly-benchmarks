@@ -1,0 +1,4 @@
+module.exports=function anonymous(options,Sqrl
+/*``*/) {
+var tmpltRes='<div>\r\n    <h1 class=\'header\'>';tmpltRes+=options.header;tmpltRes+='</h1>\r\n    <h2 class=\'header2\'>';tmpltRes+=options.header2;tmpltRes+='</h2>\r\n    <h3 class=\'header3\'>';tmpltRes+=options.header3;tmpltRes+='</h3>\r\n    <h4 class=\'header4\'>';tmpltRes+=options.header4;tmpltRes+='</h4>\r\n    <h5 class=\'header5\'>';tmpltRes+=options.header5;tmpltRes+='</h5>\r\n    <h6 class=\'header6\'>';tmpltRes+=options.header6;tmpltRes+='</h6>\r\n    <ul class=\'list\'>\r\n        ';for(var i=0;i<options.list.length; i++){tmpltRes+=(function(hvals){var tmpltRes='';var hvals0=hvals;tmpltRes+='\r\n        <li class=\'item\'>';tmpltRes+=hvals.this;tmpltRes+='</li>\r\n        ';return tmpltRes})({this:options.list[i],index:i})};tmpltRes+='\r\n    </ul>\r\n</div>';return tmpltRes
+}
