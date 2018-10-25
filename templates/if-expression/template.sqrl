@@ -1,6 +1,6 @@
 {{foreach(options.accounts)}}
 <div>
-{{if (@this.status === 'closed')}}
+{{if(@this.status === 'closed')}}
     <div>
     Your account has been closed!
     </div>

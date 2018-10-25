@@ -34,6 +34,7 @@
     "raptor-polyfill": "^1.0.2",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
+    "squirrelly": "^6.1.0",
     "swig": "^1.4.2",
     "uglify-js": "^3.0.0",
     "vue": "^2.0.1",

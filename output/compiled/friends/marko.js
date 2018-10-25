@@ -1,4 +1,4 @@
-// Compiled using marko@4.11.3 - DO NOT EDIT
+// Compiled using marko@4.13.8 - DO NOT EDIT
 "use strict";
 
 var marko_template = module.exports = require("marko/dist/html").t(__filename),
@@ -25,7 +25,11 @@ function render(input, out, __component, component, state) {
 
   out.w("<div class=\"friends\">");
 
+  var for__6 = 0;
+
   marko_forEach(input.friends, function(friend) {
+    var keyscope__7 = "[" + ((for__6++) + "]");
+
     out.w("<div class=\"friend\"><ul><li>Name: " +
       marko_escapeXml(input.getFullNameRaptor(friend)) +
       "</li><li>Balance: " +
@@ -49,7 +53,11 @@ function render(input, out, __component, component, state) {
     if (friend.tags.length) {
       out.w("<li>Tags: <ul>");
 
+      var for__22 = 0;
+
       marko_forEach(friend.tags, function(tag) {
+        var keyscope__23 = "[" + (((for__22++) + keyscope__7) + "]");
+
         out.w("<li>" +
           marko_escapeXml(tag) +
           "</li>");
@@ -61,7 +69,11 @@ function render(input, out, __component, component, state) {
     if (friend.friends.length) {
       out.w("<li>Friends: <ul>");
 
+      var for__27 = 0;
+
       marko_forEach(friend.friends, function(friend) {
+        var keyscope__28 = "[" + (((for__27++) + keyscope__7) + "]");
+
         out.w("<li>" +
           marko_escapeXml(friend.name) +
           " (" +
@@ -79,13 +91,13 @@ function render(input, out, __component, component, state) {
 
   init_components_tag({}, out);
 
-  await_reorderer_tag({}, out, __component, "24");
+  await_reorderer_tag({}, out, __component, "30");
 
   out.w("</body></html>");
 }
 
 marko_template._ = marko_renderer(render, {
-    ae_: true,
+    ak_: true,
     _l_: marko_componentType
   });
 

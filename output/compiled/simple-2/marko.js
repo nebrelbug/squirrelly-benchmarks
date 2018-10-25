@@ -1,4 +1,4 @@
-// Compiled using marko@4.11.3 - DO NOT EDIT
+// Compiled using marko@4.13.8 - DO NOT EDIT
 "use strict";
 
 var marko_template = module.exports = require("marko/dist/html").t(__filename),
@@ -27,7 +27,11 @@ function render(input, out, __component, component, state) {
     marko_escapeXml(input.header6) +
     "</h6><ul class=\"list\">");
 
+  var for__8 = 0;
+
   marko_forEach(input.list, function(item) {
+    var keyscope__9 = "[" + ((for__8++) + "]");
+
     out.w("<li class=\"item\">" +
       marko_escapeXml(item) +
       "</li>");
@@ -37,7 +41,7 @@ function render(input, out, __component, component, state) {
 }
 
 marko_template._ = marko_renderer(render, {
-    ae_: true,
+    ak_: true,
     _l_: marko_componentType
   });
 

@@ -1,4 +1,4 @@
-// Compiled using marko@4.11.3 - DO NOT EDIT
+// Compiled using marko@4.13.8 - DO NOT EDIT
 "use strict";
 
 var marko_template = module.exports = require("marko/dist/html").t(__filename),
@@ -29,8 +29,12 @@ function render(input, out, __component, component, state) {
   if (input.colors.length) {
     out.w("<ul>");
 
+    var for__5 = 0;
+
     for (color__i = 0, color__array = input.colors, color__len = color__array && color__array.length; color__i < color__len; color__i++) {
       color = color__array[color__i];
+
+      var keyscope__6 = "[" + ((for__5++) + "]");
 
       out.w("<li style=\"background-color: " +
         marko_escapeXmlAttr(color) +
@@ -52,7 +56,7 @@ function render(input, out, __component, component, state) {
 }
 
 marko_template._ = marko_renderer(render, {
-    ae_: true,
+    ak_: true,
     _l_: marko_componentType
   });
 

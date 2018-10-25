@@ -1,4 +1,4 @@
-// Compiled using marko@4.11.3 - DO NOT EDIT
+// Compiled using marko@4.13.8 - DO NOT EDIT
 "use strict";
 
 var marko_template = module.exports = require("marko/dist/html").t(__filename),
@@ -20,7 +20,11 @@ function render(input, out, __component, component, state) {
     marko_escapeXmlAttr(input.view) +
     "\">");
 
+  var for__15 = 0;
+
   marko_forEach(input.searchRecords, function(searchRecord) {
+    var keyscope__16 = "[" + ((for__15++) + "]");
+
     out.w("<div class=\"search-item\"><div class=\"search-item-container drop-shadow\"><div class=\"img-container\"><img src=\"" +
       marko_escapeXmlAttr(searchRecord.imgUrl) +
       "\"></div><h4 class=\"title\"><a href=\"" +
@@ -37,7 +41,11 @@ function render(input, out, __component, component, state) {
     if (searchRecord.sizes && searchRecord.sizes.length) {
       out.w("<div>Sizes available:<ul>");
 
+      var for__26 = 0;
+
       marko_forEach(searchRecord.sizes, function(size) {
+        var keyscope__27 = "[" + (((for__26++) + keyscope__16) + "]");
+
         out.w("<li>" +
           marko_escapeXml(size) +
           "</li>");
@@ -53,7 +61,7 @@ function render(input, out, __component, component, state) {
 }
 
 marko_template._ = marko_renderer(render, {
-    ae_: true,
+    ak_: true,
     _l_: marko_componentType
   });
 
