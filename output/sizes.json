@@ -134,29 +134,5 @@
             "marko": 1155,
             "squirrelly": 577
         }
-    },
-    "simple-string": {
-        "gzipped": {
-            "dot": 114,
-            "handlebars": 196,
-            "pug": 124,
-            "squirrelly": 116
-        },
-        "uncompressed": {
-            "dot": 102,
-            "handlebars": 246,
-            "pug": 116,
-            "squirrelly": 104
-        }
-    },
-    "ui-components": {
-        "gzipped": {
-            "react": 204,
-            "marko": 387
-        },
-        "uncompressed": {
-            "react": 310,
-            "marko": 990
-        }
     }
 }

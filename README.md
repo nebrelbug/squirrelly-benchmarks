@@ -9,9 +9,6 @@ This project provides a framework for running benchmarks against multiple templa
 - [Current Results](#current-results)
 	- [Performance](#performance)
 	- [Compiled Size](#compiled-size)
-- [Client-side Runtime Sizes](#client-side-runtime-sizes)
-	- [Marko](#marko)
-	- [Dust](#dust)
 - [Contribute](#contribute)
 	- [Adding a New Comparison Group](#adding-a-new-comparison-group)
 	- [Adding a New Template Engine](#adding-a-new-template-engine)
@@ -42,76 +39,66 @@ Higher numbers are better.
                       RUNTIME PERFORMANCE
                       ===================
                       friends
-              ✓ squirrelly »   13,761 op/s (fastest)
-                   ✗ marko »    3,496 op/s (74.59% slower)
-                    ✗ dust »    1,142 op/s (91.70% slower)
+              ✓ squirrelly »    9,756 op/s (fastest)
+                   ✗ marko »    2,335 op/s (76.07% slower)
+                    ✗ dust »      745 op/s (92.36% slower)
 
                       if-expression
-                     ✓ pug »  504,740 op/s (fastest)
-              ✗ squirrelly »  495,894 op/s (1.75% slower)
-                   ✗ marko »  365,350 op/s (27.62% slower)
-                    ✗ jade »   76,090 op/s (84.92% slower)
+              ✓ squirrelly »  332,462 op/s (fastest)
+                     ✗ pug »  318,860 op/s (4.09% slower)
+                   ✗ marko »  245,827 op/s (26.06% slower)
+                    ✗ jade »   48,208 op/s (85.50% slower)
 
                       projects-escaped
-              ✓ squirrelly »  106,011 op/s (fastest)
-                   ✗ marko »   86,958 op/s (17.97% slower)
-      ✗ marko (native-for) »   86,893 op/s (18.03% slower)
-              ✗ handlebars »   70,191 op/s (33.79% slower)
-                    ✗ dust »   17,654 op/s (83.35% slower)
+              ✓ squirrelly »   86,346 op/s (fastest)
+      ✗ marko (native-for) »   59,129 op/s (31.52% slower)
+                   ✗ marko »   55,498 op/s (35.73% slower)
+              ✗ handlebars »   46,723 op/s (45.89% slower)
+                    ✗ dust »   10,864 op/s (87.42% slower)
 
                       projects-unescaped
-              ✓ squirrelly »  559,110 op/s (fastest)
-      ✗ marko (native-for) »  297,802 op/s (46.74% slower)
-                   ✗ marko »  280,441 op/s (49.84% slower)
-              ✗ handlebars »  254,057 op/s (54.56% slower)
-                    ✗ dust »  140,005 op/s (74.96% slower)
+              ✓ squirrelly »  512,468 op/s (fastest)
+      ✗ marko (native-for) »  284,769 op/s (44.43% slower)
+                   ✗ marko »  266,443 op/s (48.01% slower)
+              ✗ handlebars »  247,155 op/s (51.77% slower)
+                    ✗ dust »  130,209 op/s (74.59% slower)
 
                       reverse-helper
-              ✓ squirrelly »  529,570 op/s (fastest)
-                    ✗ dust »  378,558 op/s (28.52% slower)
-                   ✗ marko »  358,707 op/s (32.26% slower)
+              ✓ squirrelly »  527,494 op/s (fastest)
+                   ✗ marko »  355,871 op/s (32.54% slower)
+                    ✗ dust »  285,075 op/s (45.96% slower)
 
                       search-results
-              ✓ squirrelly »  133,058 op/s (fastest)
-                   ✗ marko »   35,798 op/s (73.10% slower)
-                    ✗ dust »   17,528 op/s (86.83% slower)
+              ✓ squirrelly »  110,577 op/s (fastest)
+                   ✗ marko »   29,041 op/s (73.74% slower)
+                    ✗ dust »   16,052 op/s (85.48% slower)
 
                       simple-0
-              ✓ squirrelly »  508,187 op/s (fastest)
-                     ✗ es6 »  493,627 op/s (2.87% slower)
-                     ✗ dot »  396,637 op/s (21.95% slower)
-                   ✗ marko »  330,315 op/s (35.00% slower)
-                    ✗ dust »  294,145 op/s (42.12% slower)
-                  ✗ lodash »  292,718 op/s (42.40% slower)
-              ✗ handlebars »  265,915 op/s (47.67% slower)
+              ✓ squirrelly »  475,562 op/s (fastest)
+                     ✗ es6 »  473,864 op/s (0.36% slower)
+                     ✗ dot »  367,335 op/s (22.76% slower)
+                   ✗ marko »  333,608 op/s (29.85% slower)
+                  ✗ lodash »  298,328 op/s (37.27% slower)
+                    ✗ dust »  273,767 op/s (42.43% slower)
+              ✗ handlebars »  259,811 op/s (45.37% slower)
 
                       simple-1
-              ✓ squirrelly »  418,679 op/s (fastest)
-                     ✗ pug »  346,237 op/s (17.30% slower)
-                     ✗ dot »  292,098 op/s (30.23% slower)
-                   ✗ marko »  211,082 op/s (49.58% slower)
-              ✗ handlebars »  175,058 op/s (58.19% slower)
-                    ✗ dust »  148,009 op/s (64.65% slower)
-                    ✗ jade »   78,165 op/s (81.33% slower)
-                    ✗ swig »   51,176 op/s (87.78% slower)
-                ✗ nunjucks »   45,477 op/s (89.14% slower)
-                     ✗ vue »   16,191 op/s (96.13% slower)
-                   ✗ react »    3,210 op/s (99.23% slower)
+              ✓ squirrelly »  493,250 op/s (fastest)
+                     ✗ dot »  259,210 op/s (47.45% slower)
+                     ✗ pug »  256,262 op/s (48.05% slower)
+                   ✗ marko »  211,251 op/s (57.17% slower)
+              ✗ handlebars »  170,954 op/s (65.34% slower)
+                    ✗ dust »  151,947 op/s (69.19% slower)
+                    ✗ jade »   74,229 op/s (84.95% slower)
+                    ✗ swig »   44,401 op/s (91.00% slower)
+                ✗ nunjucks »   39,043 op/s (92.08% slower)
+                     ✗ vue »   15,733 op/s (96.81% slower)
+                   ✗ react »    3,317 op/s (99.33% slower)
 
                       simple-2
-              ✓ squirrelly »  560,669 op/s (fastest)
-                   ✗ marko »  272,055 op/s (51.48% slower)
-                    ✗ dust »  167,306 op/s (70.16% slower)
-
-                      simple-string
-              ✓ squirrelly »  723,152 op/s (fastest)
-                     ✗ pug »  656,641 op/s (9.20% slower)
-                     ✗ dot »  644,051 op/s (10.94% slower)
-              ✗ handlebars »  566,308 op/s (21.69% slower)
-
-                      ui-components
-                   ✓ marko »  121,527 op/s (fastest)
-                   ✗ react »    2,744 op/s (97.74% slower)
+              ✓ squirrelly »  538,444 op/s (fastest)
+                   ✗ marko »  267,496 op/s (50.32% slower)
+                    ✗ dust »  170,896 op/s (68.26% slower)
 ```
 <!-- </performance> -->
 
@@ -222,22 +209,6 @@ Lower numbers are better.
                                     2.20% larger                 (smallest)
                    ✗ marko »   442 bytes gzipped    1155 bytes uncompressed
                                    39.59% larger              50.04% larger
-
-                      simple-string
-                     ✓ dot »   114 bytes gzipped     102 bytes uncompressed
-                                      (smallest)                 (smallest)
-              ✗ squirrelly »   116 bytes gzipped     104 bytes uncompressed
-                                    1.72% larger               1.92% larger
-                     ✗ pug »   124 bytes gzipped     116 bytes uncompressed
-                                    8.06% larger              12.07% larger
-              ✗ handlebars »   196 bytes gzipped     246 bytes uncompressed
-                                   41.84% larger              58.54% larger
-
-                      ui-components
-                   ✓ react »   204 bytes gzipped     310 bytes uncompressed
-                                      (smallest)                 (smallest)
-                   ✗ marko »   387 bytes gzipped     990 bytes uncompressed
-                                   47.29% larger              68.69% larger
 ```
 <!-- </size> -->
 
