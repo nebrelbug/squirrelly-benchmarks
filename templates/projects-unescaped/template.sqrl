@@ -1,13 +1,13 @@
 <html>
     <head>
-        <title>{{title}}</title>
+        <title>{{it.title}}</title>
     </head>
     <body>
-        <p>{{text}}</p>
-        {{if(options.projects)}}
-        {{each(options.projects)}}
-            <a href="{{@this.url}}">{{@this.name}}</a>
-            <p>{{@this.description}}</p>
+        <p>{{it.text}}</p>
+        {{~if(it.projects)}}
+        {{~each(it.projects) => val}}
+            <a href="{{val.url}}">{{val.name}}</a>
+            <p>{{val.description}}</p>
         {{/each}}
         {{#else}}
             No projects

@@ -1,14 +1,12 @@
-// Compiled using marko@4.13.8 - DO NOT EDIT
+// Compiled using marko@4.18.46 - DO NOT EDIT
 "use strict";
 
 var marko_template = module.exports = require("marko/dist/html").t(__filename),
     marko_componentType = "/templating-benchmarks$0.0.0/templates/simple-2/template.marko",
-    components_helpers = require("marko/dist/components/helpers"),
-    marko_renderer = components_helpers.r,
-    marko_defineComponent = components_helpers.c,
-    marko_helpers = require("marko/dist/runtime/html/helpers"),
-    marko_escapeXml = marko_helpers.x,
-    marko_forEach = marko_helpers.f;
+    marko_renderer = require("marko/dist/runtime/components/renderer"),
+    helpers_escape_xml = require("marko/dist/runtime/html/helpers/escape-xml"),
+    marko_escapeXml = helpers_escape_xml.x,
+    marko_forOf = require("marko/dist/runtime/helpers/for-of");
 
 function render(input, out, __component, component, state) {
   var data = input;
@@ -27,10 +25,10 @@ function render(input, out, __component, component, state) {
     marko_escapeXml(input.header6) +
     "</h6><ul class=\"list\">");
 
-  var for__8 = 0;
+  var $for$0 = 0;
 
-  marko_forEach(input.list, function(item) {
-    var keyscope__9 = "[" + ((for__8++) + "]");
+  marko_forOf(input.list, function(item) {
+    var $keyScope$0 = "[" + (($for$0++) + "]");
 
     out.w("<li class=\"item\">" +
       marko_escapeXml(item) +
@@ -41,11 +39,9 @@ function render(input, out, __component, component, state) {
 }
 
 marko_template._ = marko_renderer(render, {
-    ak_: true,
-    _l_: marko_componentType
+    d_: true,
+    e_: marko_componentType
   });
-
-marko_template.Component = marko_defineComponent({}, marko_template._);
 
 marko_template.meta = {
     id: "/templating-benchmarks$0.0.0/templates/simple-2/template.marko"

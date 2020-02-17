@@ -1,24 +1,18 @@
-// Compiled using marko@4.13.8 - DO NOT EDIT
+// Compiled using marko@4.18.46 - DO NOT EDIT
 "use strict";
 
 var marko_template = module.exports = require("marko/dist/html").t(__filename),
     marko_componentType = "/templating-benchmarks$0.0.0/templates/simple-1/template.marko",
-    components_helpers = require("marko/dist/components/helpers"),
-    marko_renderer = components_helpers.r,
-    marko_defineComponent = components_helpers.c,
-    marko_helpers = require("marko/dist/runtime/html/helpers"),
-    marko_escapeXml = marko_helpers.x,
-    marko_str = marko_helpers.s,
-    marko_escapeXmlAttr = marko_helpers.xa,
-    marko_classAttr = marko_helpers.ca;
+    marko_renderer = require("marko/dist/runtime/components/renderer"),
+    helpers_escape_xml = require("marko/dist/runtime/html/helpers/escape-xml"),
+    marko_escapeXml = helpers_escape_xml.x,
+    marko_str = require("marko/dist/runtime/helpers/to-string"),
+    marko_forOf = require("marko/dist/runtime/helpers/for-of"),
+    marko_styleAttr = require("marko/dist/runtime/html/helpers/style-attr"),
+    marko_classAttr = require("marko/dist/runtime/html/helpers/class-attr");
 
 function render(input, out, __component, component, state) {
   var data = input;
-
-  var color,
-      color__i,
-      color__array,
-      color__len;
 
   out.w("<div class=\"simple-1\" style=\"background-color: blue; border: 1px solid black\"><div class=\"colors\"><span class=\"hello\">Hello " +
     marko_escapeXml(input.name) +
@@ -29,19 +23,17 @@ function render(input, out, __component, component, state) {
   if (input.colors.length) {
     out.w("<ul>");
 
-    var for__5 = 0;
+    var $for$0 = 0;
 
-    for (color__i = 0, color__array = input.colors, color__len = color__array && color__array.length; color__i < color__len; color__i++) {
-      color = color__array[color__i];
+    marko_forOf(input.colors, function(color) {
+      var $keyScope$0 = "[" + (($for$0++) + "]");
 
-      var keyscope__6 = "[" + ((for__5++) + "]");
-
-      out.w("<li style=\"background-color: " +
-        marko_escapeXmlAttr(color) +
-        "\" class=\"color\">" +
+      out.w("<li" +
+        marko_styleAttr("background-color: " + color) +
+        " class=\"color\">" +
         marko_escapeXml(color) +
         "</li>");
-    }
+    });
 
     out.w("</ul>");
   } else {
@@ -56,11 +48,9 @@ function render(input, out, __component, component, state) {
 }
 
 marko_template._ = marko_renderer(render, {
-    ak_: true,
-    _l_: marko_componentType
+    d_: true,
+    e_: marko_componentType
   });
-
-marko_template.Component = marko_defineComponent({}, marko_template._);
 
 marko_template.meta = {
     id: "/templating-benchmarks$0.0.0/templates/simple-1/template.marko"

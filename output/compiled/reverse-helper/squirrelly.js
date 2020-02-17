@@ -1,4 +1,1 @@
-module.exports=function anonymous(options,Sqrl
-/*``*/) {
-var tR='<div>\r\n';tR+=Sqrl.F.reverse(options.A);tR+='\r\n';tR+=Sqrl.F.reverse(options.B);tR+='\r\n';tR+=Sqrl.F.reverse(options.C);tR+='\r\n';tR+=Sqrl.F.reverse(options.D);tR+='\r\n';tR+=Sqrl.F.reverse(options.E);tR+='\r\n</div>';return tR
-}
+module.exports=function(it,c,cb){var tR='';tR+='<div>\n';tR+=c.l('F','reverse')(it.A);tR+=c.l('F','reverse')(it.B);tR+=c.l('F','reverse')(it.C);tR+=c.l('F','reverse')(it.D);tR+=c.l('F','reverse')(it.E);tR+='</div>';if(cb){return cb(null,tR)} return tR}

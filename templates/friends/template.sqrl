@@ -6,49 +6,49 @@
 </head>
 <body>
 <div class="friends">
-{{each(options.friends)}}
+{{~each(it.friends) => val}}
 <div class="friend">
 <ul>
-<li>Name: {{@this.firstName}} {{@this.lastName}}</li>
+<li>Name: {{val.firstName}} {{val.lastName}}</li>
 <li>
-Balance: {{@this.balance}}
+Balance: {{val.balance}}
 </li>
 <li>
-Age: {{@this.age}}
+Age: {{val.age}}
 </li>
 <li>
-Address: {{@this.address}}
+Address: {{val.address}}
 </li>
 <li>
-Image: <img src="{{@this.picture}}">
+Image: <img src="{{val.picture}}">
 </li>
 <li>
-Company: {{@this.company}}
+Company: {{val.company}}
 </li>
 <li>
-Email: <a href="mailto:{{@this.email}}">{{@this.email}}</a>
+Email: <a href="mailto:{{val.email}}">{{val.email}}</a>
 </li>
 <li>
-About: {{@this.about}}
+About: {{val.about}}
 </li>
-{{if(@this.tags)}}
+{{~if(val.tags)}}
 <li>Tags:
 <ul>
-{{each(@this.tags)}}
+{{~each(val.tags) => tag}}
 <li>
-{{@this}}
+{{tag}}
 </li>
 {{/each}}
 </ul>
 </li>
 {{/if}}
-{{if(@this.friends)}}
+{{~if(val.friends)}}
 <li>
 Friends:
 <ul>
-{{each(@this.friends)}}
+{{~each(val.friends) => friend}}
 <li>
-{{@this.name}} ({{@this.id}})
+{{friend.name}} ({{friend.id}})
 </li>
 {{/each}}
 </ul>

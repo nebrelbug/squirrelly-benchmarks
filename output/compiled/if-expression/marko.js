@@ -1,23 +1,21 @@
-// Compiled using marko@4.13.8 - DO NOT EDIT
+// Compiled using marko@4.18.46 - DO NOT EDIT
 "use strict";
 
 var marko_template = module.exports = require("marko/dist/html").t(__filename),
     marko_componentType = "/templating-benchmarks$0.0.0/templates/if-expression/template.marko",
-    components_helpers = require("marko/dist/components/helpers"),
-    marko_renderer = components_helpers.r,
-    marko_defineComponent = components_helpers.c,
-    marko_helpers = require("marko/dist/runtime/html/helpers"),
-    marko_forEach = marko_helpers.f,
-    marko_escapeXml = marko_helpers.x,
-    marko_classAttr = marko_helpers.ca;
+    marko_renderer = require("marko/dist/runtime/components/renderer"),
+    marko_forOf = require("marko/dist/runtime/helpers/for-of"),
+    helpers_escape_xml = require("marko/dist/runtime/html/helpers/escape-xml"),
+    marko_escapeXml = helpers_escape_xml.x,
+    marko_classAttr = require("marko/dist/runtime/html/helpers/class-attr");
 
 function render(input, out, __component, component, state) {
   var data = input;
 
-  var for__0 = 0;
+  var $for$0 = 0;
 
-  marko_forEach(input.accounts, function(account) {
-    var keyscope__1 = "[" + ((for__0++) + "]");
+  marko_forOf(input.accounts, function(account) {
+    var $keyScope$0 = "[" + (($for$0++) + "]");
 
     out.w("<div>");
 
@@ -38,11 +36,9 @@ function render(input, out, __component, component, state) {
 }
 
 marko_template._ = marko_renderer(render, {
-    ak_: true,
-    _l_: marko_componentType
+    d_: true,
+    e_: marko_componentType
   });
-
-marko_template.Component = marko_defineComponent({}, marko_template._);
 
 marko_template.meta = {
     id: "/templating-benchmarks$0.0.0/templates/if-expression/template.marko"

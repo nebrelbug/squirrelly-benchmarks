@@ -1,17 +1,17 @@
 (function() {(window.nunjucksPrecompiled = window.nunjucksPrecompiled || {})["simple-1"] = (function() {
 function root(env, context, frame, runtime, cb) {
-var lineno = null;
-var colno = null;
+var lineno = 0;
+var colno = 0;
 var output = "";
 try {
 var parentTemplate = null;
-output += "<div class=\"simple-1\" style=\"background-color: blue; border: 1px solid black\">\r\n    <div class=\"colors\">\r\n        <span class=\"hello\">Hello ";
+output += "<div class=\"simple-1\" style=\"background-color: blue; border: 1px solid black\">\n    <div class=\"colors\">\n        <span class=\"hello\">Hello ";
 output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "name"), env.opts.autoescape);
 output += "! <strong>You have ";
 output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "messageCount"), env.opts.autoescape);
-output += " messages!</strong></span>\r\n\r\n        ";
+output += " messages!</strong></span>\n\n        ";
 if(runtime.contextOrFrameLookup(context, frame, "colors") && runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "colors")),"length")) {
-output += "\r\n        <ul>\r\n            ";
+output += "\n        <ul>\n            ";
 frame = frame.push();
 var t_3 = runtime.contextOrFrameLookup(context, frame, "colors");
 if(t_3) {t_3 = runtime.fromIterator(t_3);
@@ -26,21 +26,21 @@ frame.set("loop.revindex0", t_2 - t_1 - 1);
 frame.set("loop.first", t_1 === 0);
 frame.set("loop.last", t_1 === t_2 - 1);
 frame.set("loop.length", t_2);
-output += "\r\n            <li class=\"color\">";
+output += "\n            <li class=\"color\">";
 output += runtime.suppressValue(t_4, env.opts.autoescape);
-output += "</li>\r\n            ";
+output += "</li>\n            ";
 ;
 }
 }
 frame = frame.pop();
-output += "\r\n        </ul>\r\n        ";
+output += "\n        </ul>\n        ";
 ;
 }
 else {
-output += "\r\n        <div>\r\n            No colors!\r\n        </div>\r\n        ";
+output += "\n        <div>\n            No colors!\n        </div>\n        ";
 ;
 }
-output += "\r\n    </div>\r\n    <button type=\"button\" class=\"";
+output += "\n    </div>\n    <button type=\"button\" class=\"";
 if(runtime.contextOrFrameLookup(context, frame, "primary")) {
 output += "primary";
 ;
@@ -49,7 +49,7 @@ else {
 output += "secondary";
 ;
 }
-output += "\">Click me!</button>\r\n</div>";
+output += "\">Click me!</button>\n</div>";
 if(parentTemplate) {
 parentTemplate.rootRenderFunc(env, context, frame, runtime, cb);
 } else {

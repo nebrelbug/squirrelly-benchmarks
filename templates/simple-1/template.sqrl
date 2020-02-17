@@ -1,11 +1,11 @@
 <div class="simple-1" style="background-color: blue; border: 1px solid black">
     <div class="colors">
-        <span class="hello">Hello {{name}}! <strong>You have {{messageCount}} messages!</strong></span>
+        <span class="hello">Hello {{it.name}}! <strong>You have {{it.messageCount}} messages!</strong></span>
 
-        {{if(options.colors)}}
+        {{~if(it.colors)}}
         <ul>
-            {{each(options.colors)}}
-            <li class="color">{{@this}}</li>
+            {{~each(it.colors) => val}}
+            <li class="color">{{val}}</li>
             {{/each}}
         </ul>
         {{#else}}
@@ -14,5 +14,5 @@
         </div>
         {{/if}}
     </div>
-    <button type="button" class="{{if(options.primary)}}primary{{#else}}secondary{{/if}}">Click me!</button>
+    <button type="button" class="{{~if(it.primary)}}primary{{#else}}secondary{{/if}}">Click me!</button>
 </div>

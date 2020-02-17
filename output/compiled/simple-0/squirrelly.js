@@ -1,0 +1,1 @@
+module.exports=function(it,c,cb){var tR='';tR+='Hello ';tR+=it.name;tR+='! <strong>You have ';tR+=it.messageCount;tR+=' messages! ';tR+=it.colors;if(cb){return cb(null,tR)} return tR}
