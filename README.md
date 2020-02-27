@@ -1,17 +1,18 @@
-templating-benchmarks
-=====================
+# templating-benchmarks
 
 This project provides a framework for running benchmarks against multiple templating engines under Node.js.
 
 # Table of Contents
 
+- [templating-benchmarks](#templating-benchmarks)
+- [Table of Contents](#table-of-contents)
 - [Run Benchmarks](#run-benchmarks)
 - [Current Results](#current-results)
-	- [Performance](#performance)
-	- [Compiled Size](#compiled-size)
+  - [Performance](#performance)
+  - [Compiled Size](#compiled-size)
 - [Contribute](#contribute)
-	- [Adding a New Comparison Group](#adding-a-new-comparison-group)
-	- [Adding a New Template Engine](#adding-a-new-template-engine)
+  - [Adding a New Comparison Group](#adding-a-new-comparison-group)
+  - [Adding a New Template Engine](#adding-a-new-template-engine)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -25,7 +26,7 @@ This project provides a framework for running benchmarks against multiple templa
 
 The following results were collected with the following setup:
 
-- Node.js v8.12.0
+- Node.js v10.19.0
 - HP Notebook
 - Processor: 2.7 GHz Intel Core i7
 - Memory: 8 GB
@@ -39,66 +40,66 @@ Higher numbers are better.
                       RUNTIME PERFORMANCE
                       ===================
                       friends
-              ✓ squirrelly »    8,865 op/s (fastest)
-                   ✗ marko »      937 op/s (89.43% slower)
-                    ✗ dust »      725 op/s (91.82% slower)
+              ✓ squirrelly »   15,460 op/s (fastest)
+                   ✗ marko »    1,790 op/s (88.42% slower)
+                    ✗ dust »    1,324 op/s (91.44% slower)
 
                       if-expression
-              ✓ squirrelly »  390,828 op/s (fastest)
-                     ✗ pug »  360,955 op/s (7.64% slower)
-                   ✗ marko »  182,351 op/s (53.34% slower)
-                    ✗ jade »   56,982 op/s (85.42% slower)
+              ✓ squirrelly »  751,706 op/s (fastest)
+                     ✗ pug »  667,132 op/s (11.25% slower)
+                   ✗ marko »  349,034 op/s (53.57% slower)
+                    ✗ jade »  107,176 op/s (85.74% slower)
 
                       projects-escaped
-              ✓ squirrelly »   63,771 op/s (fastest)
-              ✗ handlebars »   25,893 op/s (59.40% slower)
-                    ✗ dust »   25,580 op/s (59.89% slower)
-                   ✗ marko »   10,567 op/s (83.43% slower)
-      ✗ marko (native-for) »    7,548 op/s (88.16% slower)
+              ✓ squirrelly »  114,497 op/s (fastest)
+              ✗ handlebars »   47,254 op/s (58.73% slower)
+                    ✗ dust »   44,693 op/s (60.97% slower)
+                   ✗ marko »   20,091 op/s (82.45% slower)
+      ✗ marko (native-for) »   14,246 op/s (87.56% slower)
 
                       projects-unescaped
-              ✓ squirrelly »  402,287 op/s (fastest)
-      ✗ marko (native-for) »  155,516 op/s (61.34% slower)
-                   ✗ marko »  141,174 op/s (64.91% slower)
-                    ✗ dust »   72,966 op/s (81.86% slower)
-              ✗ handlebars »   54,145 op/s (86.54% slower)
+              ✓ squirrelly »  731,700 op/s (fastest)
+      ✗ marko (native-for) »  290,188 op/s (60.34% slower)
+                   ✗ marko »  270,002 op/s (63.10% slower)
+                    ✗ dust »  131,955 op/s (81.97% slower)
+              ✗ handlebars »   96,613 op/s (86.80% slower)
 
                       reverse-helper
-              ✓ squirrelly »  414,223 op/s (fastest)
-                    ✗ dust »  257,059 op/s (37.94% slower)
-                   ✗ marko »  218,892 op/s (47.16% slower)
+              ✓ squirrelly »  796,248 op/s (fastest)
+                    ✗ dust »  475,887 op/s (40.23% slower)
+                   ✗ marko »  404,410 op/s (49.21% slower)
 
                       search-results
-              ✓ squirrelly »   91,771 op/s (fastest)
-                   ✗ marko »    8,697 op/s (90.52% slower)
-                    ✗ dust »    8,570 op/s (90.66% slower)
+              ✓ squirrelly »  156,009 op/s (fastest)
+                   ✗ marko »   16,062 op/s (89.70% slower)
+                    ✗ dust »    9,618 op/s (93.83% slower)
 
                       simple-0
-              ✓ squirrelly »  326,100 op/s (fastest)
-                     ✗ es6 »  321,029 op/s (1.56% slower)
-                     ✗ dot »  253,993 op/s (22.11% slower)
-                   ✗ marko »  190,286 op/s (41.65% slower)
-                  ✗ lodash »  188,564 op/s (42.18% slower)
-                    ✗ dust »  181,208 op/s (44.43% slower)
-              ✗ handlebars »   84,974 op/s (73.94% slower)
+              ✓ squirrelly »  623,417 op/s (fastest)
+                     ✗ es6 »  607,489 op/s (2.55% slower)
+                     ✗ dot »  495,149 op/s (20.57% slower)
+                   ✗ marko »  342,570 op/s (45.05% slower)
+                    ✗ dust »  340,490 op/s (45.38% slower)
+                  ✗ lodash »  217,892 op/s (65.05% slower)
+              ✗ handlebars »  157,393 op/s (74.75% slower)
 
                       simple-1
-              ✓ squirrelly »  415,430 op/s (fastest)
-                     ✗ pug »  256,675 op/s (38.21% slower)
-                     ✗ dot »  179,302 op/s (56.84% slower)
-                    ✗ swig »   99,196 op/s (76.12% slower)
-                    ✗ dust »   85,582 op/s (79.40% slower)
-                   ✗ marko »   79,005 op/s (80.98% slower)
-                    ✗ jade »   54,177 op/s (86.96% slower)
-              ✗ handlebars »   53,483 op/s (87.13% slower)
-                ✗ nunjucks »   33,222 op/s (92.00% slower)
-                     ✗ vue »   15,995 op/s (96.15% slower)
-                   ✗ react »    3,280 op/s (99.21% slower)
+              ✓ squirrelly »  793,242 op/s (fastest)
+                     ✗ pug »  485,245 op/s (38.83% slower)
+                     ✗ dot »  344,908 op/s (56.52% slower)
+                    ✗ swig »  182,478 op/s (77.00% slower)
+                   ✗ marko »  141,249 op/s (82.19% slower)
+                    ✗ dust »  112,544 op/s (85.81% slower)
+                    ✗ jade »  101,616 op/s (87.19% slower)
+              ✗ handlebars »   94,475 op/s (88.09% slower)
+                ✗ nunjucks »   35,180 op/s (95.57% slower)
+                     ✗ vue »   30,360 op/s (96.17% slower)
+                   ✗ react »    6,414 op/s (99.19% slower)
 
                       simple-2
-              ✓ squirrelly »  398,944 op/s (fastest)
-                   ✗ marko »  155,894 op/s (60.92% slower)
-                    ✗ dust »   87,991 op/s (77.94% slower)
+              ✓ squirrelly »  805,600 op/s (fastest)
+                   ✗ marko »  300,677 op/s (62.68% slower)
+                    ✗ dust »  116,772 op/s (85.50% slower)
 ```
 <!-- </performance> -->
 
