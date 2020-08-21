@@ -1,16 +1,16 @@
 <html>
-<head>
-<title>{{it.title|e}}</title>
-</head>
-<body>
-<p>{{it.text|e}}</p>
-{{@if(it.projects)}}
-{{@each(it.projects) => val, index}}
-<a href="{{val.url|e}}">{{val.name|e}}</a>
-<p>{{val.description|e}}</p>
-{{/each}}
-{{#else}}
-No projects
-{{/if}}
-</body>
+    <head>
+        <title>{{it.title|e}}</title>
+    </head>
+    <body>
+        <p>{{it.text|e}}</p>
+        {{@if(it.projects)}}
+        {{@each(it.projects) => val, index}}
+            <a href="{{val.url|e}}">{{val.name|e}}</a>
+            <p>{{val.description|e}}</p>
+        {{/each}}
+        {{#else}}
+            No projects
+        {{/if}}
+    </body>
 </html>
