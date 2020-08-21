@@ -2,6 +2,8 @@
 
 This project provides a framework for running benchmarks against multiple templating engines under Node.js.
 
+_Note: I upgraded the benchmarks to use Squirrelly v8_
+
 # Table of Contents
 
 - [templating-benchmarks](#templating-benchmarks)
