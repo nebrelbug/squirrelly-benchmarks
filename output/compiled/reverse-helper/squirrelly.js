@@ -1,1 +1,1 @@
-module.exports=function(it,c,cb){var tR='';tR+='<div>\n';tR+=c.l('F','reverse')(it.A);tR+=c.l('F','reverse')(it.B);tR+=c.l('F','reverse')(it.C);tR+=c.l('F','reverse')(it.D);tR+=c.l('F','reverse')(it.E);tR+='</div>';if(cb){return cb(null,tR)} return tR}
+module.exports=function(it,c,cb){var tR='';tR+='<div>\n';tR+=c.l('F','reverse')(it.A);tR+=c.l('F','reverse')(it.B);tR+=c.l('F','reverse')(it.C);tR+=c.l('F','reverse')(it.D);tR+=c.l('F','reverse')(it.E);tR+='</div>';if(cb){cb(null,tR)} return tR}

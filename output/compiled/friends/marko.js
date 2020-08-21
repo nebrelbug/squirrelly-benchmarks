@@ -1,33 +1,29 @@
-// Compiled using marko@4.18.46 - DO NOT EDIT
+// Compiled using marko@4.22.8 - DO NOT EDIT
 "use strict";
 
 var marko_template = module.exports = require("marko/dist/html").t(__filename),
     marko_componentType = "/templating-benchmarks$0.0.0/templates/friends/template.marko",
     marko_renderer = require("marko/dist/runtime/components/renderer"),
-    marko_loadTag = require("marko/dist/runtime/helpers/load-tag"),
-    component_globals_tag = marko_loadTag(require("marko/dist/core-tags/components/component-globals-tag")),
     marko_forOf = require("marko/dist/runtime/helpers/for-of"),
     helpers_escape_xml = require("marko/dist/runtime/html/helpers/escape-xml"),
     marko_escapeXml = helpers_escape_xml.x,
     marko_attr = require("marko/dist/runtime/html/helpers/attr"),
+    marko_loadTag = require("marko/dist/runtime/helpers/load-tag"),
     init_components_tag = marko_loadTag(require("marko/dist/core-tags/components/init-components-tag")),
-    await_reorderer_tag = marko_loadTag(require("marko/dist/core-tags/core/await/reorderer-renderer"));
+    await_reorderer_tag = marko_loadTag(require("marko/dist/core-tags/core/await/reorderer-renderer")),
+    _preferred_script_location_tag = marko_loadTag(require("marko/dist/core-tags/components/preferred-script-location-tag"));
 
 function render(input, out, __component, component, state) {
   var data = input;
 
-  out.w("<!doctype html><html lang=\"en\"><head><meta charset=\"UTF-8\"><title>Friends</title></head><body>");
-
-  component_globals_tag({}, out);
-
-  out.w("<div class=\"friends\">");
+  out.w("<!doctype html><html lang=en><head><meta charset=UTF-8><title>Friends</title></head><body><div class=friends>");
 
   var $for$0 = 0;
 
   marko_forOf(input.friends, function(friend) {
     var $keyScope$0 = "[" + (($for$0++) + "]");
 
-    out.w("<div class=\"friend\"><ul><li>Name: " +
+    out.w("<div class=friend><ul><li>Name: " +
       marko_escapeXml(input.getFullNameRaptor(friend)) +
       "</li><li>Balance: " +
       marko_escapeXml(friend.balance) +
@@ -40,7 +36,7 @@ function render(input, out, __component, component, state) {
       "></li><li>Company: " +
       marko_escapeXml(friend.company) +
       "</li><li>Email: <a" +
-      marko_attr("href", "mailto:" + friend.email) +
+      marko_attr("href", "mailto:" + (friend.email == null ? "" : friend.email)) +
       ">" +
       marko_escapeXml(friend.email) +
       "</a></li><li>About: " +
@@ -90,6 +86,8 @@ function render(input, out, __component, component, state) {
 
   await_reorderer_tag({}, out, __component, "24");
 
+  _preferred_script_location_tag({}, out);
+
   out.w("</body></html>");
 }
 
@@ -101,8 +99,8 @@ marko_template._ = marko_renderer(render, {
 marko_template.meta = {
     id: "/templating-benchmarks$0.0.0/templates/friends/template.marko",
     tags: [
-      "marko/dist/core-tags/components/component-globals-tag",
       "marko/dist/core-tags/components/init-components-tag",
-      "marko/dist/core-tags/core/await/reorderer-renderer"
+      "marko/dist/core-tags/core/await/reorderer-renderer",
+      "marko/dist/core-tags/components/preferred-script-location-tag"
     ]
   };

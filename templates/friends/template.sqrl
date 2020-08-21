@@ -6,7 +6,7 @@
 </head>
 <body>
 <div class="friends">
-{{~each(it.friends) => val}}
+{{@each(it.friends) => val}}
 <div class="friend">
 <ul>
 <li>Name: {{val.firstName}} {{val.lastName}}</li>
@@ -31,10 +31,10 @@ Email: <a href="mailto:{{val.email}}">{{val.email}}</a>
 <li>
 About: {{val.about}}
 </li>
-{{~if(val.tags)}}
+{{@if(val.tags)}}
 <li>Tags:
 <ul>
-{{~each(val.tags) => tag}}
+{{@each(val.tags) => tag}}
 <li>
 {{tag}}
 </li>
@@ -42,11 +42,11 @@ About: {{val.about}}
 </ul>
 </li>
 {{/if}}
-{{~if(val.friends)}}
+{{@if(val.friends)}}
 <li>
 Friends:
 <ul>
-{{~each(val.friends) => friend}}
+{{@each(val.friends) => friend}}
 <li>
 {{friend.name}} ({{friend.id}})
 </li>

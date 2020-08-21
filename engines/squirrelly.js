@@ -1,6 +1,7 @@
 var Sqrl = require('squirrelly')
 Sqrl.defaultConfig.autoEscape = false // Assumes that the data is already sanitized
 Sqrl.defaultConfig.cache = false
+// Sqrl.defaultConfig.rmWhitespace = true
 
 Sqrl.filters.define('reverse', function (str) {
   // For the reverse helper

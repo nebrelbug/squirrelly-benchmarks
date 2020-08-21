@@ -2,9 +2,9 @@
     <div class="colors">
         <span class="hello">Hello {{it.name}}! <strong>You have {{it.messageCount}} messages!</strong></span>
 
-        {{~if(it.colors)}}
+        {{@if(it.colors)}}
         <ul>
-            {{~each(it.colors) => val}}
+            {{@each(it.colors) => val}}
             <li class="color">{{val}}</li>
             {{/each}}
         </ul>
@@ -14,5 +14,5 @@
         </div>
         {{/if}}
     </div>
-    <button type="button" class="{{~if(it.primary)}}primary{{#else}}secondary{{/if}}">Click me!</button>
+    <button type="button" class="{{@if(it.primary)}}primary{{#else}}secondary{{/if}}">Click me!</button>
 </div>
